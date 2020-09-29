@@ -1,0 +1,35 @@
+@mixin activeField {
+  top: -2.5rem;
+  font-size: 1.4rem;
+  color: grey;
+}
+
+.form-input {
+  position: relative;
+  margin: 5rem 0;
+
+  label {
+    position: absolute;
+    left: 0;
+    top: -.5rem;
+    transition: all .3s;
+    font-size: 1.8rem;
+  }
+
+  .active {
+    @include activeField;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ label {
+      @include activeField;
+    }
+  }
+}

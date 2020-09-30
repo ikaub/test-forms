@@ -32,4 +32,12 @@
       @include activeField;
     }
   }
+
+  .invalid {
+    border-bottom: 1px solid red;
+  }
+
+  .valid {
+    border-bottom: 1px solid green;
+  }
 }

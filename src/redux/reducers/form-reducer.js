@@ -14,9 +14,14 @@ const formReducer = (state = INITIAL_STATE, action) => {
                 tableRows: [...state.tableRows, row]
             };
         case DELETE_ROW:
+            const index = state.tableRows.findIndex(obj => obj.id === action.payload);
+            const newRows = state.tableRows.slice(index + 1).map(obj => {
+                obj.id -= 1;
+                return obj;
+            });
             return {
                 ...state,
-                tableRows: state.tableRows.filter(obj => obj.id !== action.payload)
+                tableRows: [...state.tableRows.slice(0, index), ...newRows]
             }
         default:
             return state;

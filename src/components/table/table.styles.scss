@@ -1,6 +1,10 @@
 .table {
   table {
     width: 100%;
+
+    .sort {
+      cursor: pointer;
+    }
   }
 
   .no-data-label {

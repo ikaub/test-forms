@@ -41,7 +41,7 @@ const Form = () => {
                 pattern = /^[mMaAlLeEfF]{1,6}$/;
                 break;
             default:
-                pattern = /^[a-zA-Zа-яА-Я ]{2,20}$/;
+                pattern = /^[a-zA-Z]{2,20}$/;
                 break;
         }
         setValidated({...validated, [field]: !!value.match(pattern)});

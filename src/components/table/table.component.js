@@ -41,7 +41,7 @@ const Table = () => {
                         )}
                     </tr>
                     <tr>
-                        <th></th>
+                        <th> </th>
                         {Object.keys(initialState).map((key) => (
                             <th key={key}>
                                 <span onClick={(e) => sortArray('asc', e)} id={key} className='sort'>Asc</span>|
@@ -52,7 +52,7 @@ const Table = () => {
                     </thead>
                     <tbody>
                     {displayedData.map((item, index) => (
-                        <TableRow key={index} index={index + 1} data={item}/>
+                        <TableRow key={index} data={item}/>
                     ))}
                     </tbody>
                 </table>

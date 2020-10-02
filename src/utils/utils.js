@@ -17,3 +17,13 @@ export const validatedFields = {
 };
 
 export const genders = ['m', 'f', 'male', 'female'];
+
+export const compareValues = (field, sorting) => {
+    return (obj1, obj2) => {
+        if (obj1[field] > obj2[field])
+            return sorting === 'asc' ? 1 : -1;
+        else if (obj1[field] === obj2[field])
+            return 0;
+        return sorting === 'asc' ? -1 : 1;
+    }
+}

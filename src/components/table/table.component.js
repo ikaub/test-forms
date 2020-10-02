@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useSelector} from "react-redux";
-import {compareValues, fields, initialState} from "../../utils/utils";
+import {compareValues} from "../../utils/utils";
 import TableRow from "../table-row/table-row.component";
 import './table.styles.scss';
 import TableHead from "../table-head/table-head.component";
